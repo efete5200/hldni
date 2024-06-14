@@ -1,15 +1,23 @@
-import React from "react";
-import Table from "../../components/Table";
-import db from "@/config/db";
-import DownloadButton from "@/components/DownloadButton";
+"use client";
 
-const AdminPage: React.FC = async () => {
-  const data = await db.user.findMany({
-    orderBy: {
-      createdAt: "desc",
-    },
-    take: 100,
-  });
+import React, { useEffect, useState } from "react";
+import Table from "../../components/Table";
+import DownloadButton from "@/components/DownloadButton";
+import { User } from "@prisma/client";
+
+const AdminPage: React.FC = () => {
+  const [data, setData] = useState<User[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/api/v1/user/find", {
+        cache: "no-store",
+      });
+      const fetchedData = await response.json();
+      setData(fetchedData);
+    };
+    fetchData();
+  }, []);
 
   return (
     <body>

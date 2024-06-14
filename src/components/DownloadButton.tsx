@@ -2,7 +2,9 @@
 
 const DownloadButton = () => {
   const handleDownload = async () => {
-    const response = await fetch("/api/v1/user/download");
+    const response = await fetch("/api/v1/user/download", {
+      cache: "no-store",
+    });
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");

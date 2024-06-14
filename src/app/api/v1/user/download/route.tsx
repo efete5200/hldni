@@ -8,6 +8,7 @@ import { formatGMTDate } from "@/server/service";
 export async function GET() {
   try {
     const users: User[] = await db.user.findMany();
+    console.log(users.length, db.user.count());
 
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet("Users");
