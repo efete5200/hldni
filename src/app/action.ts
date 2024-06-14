@@ -52,7 +52,7 @@ export const reserveUser = async (userInfo: UserInfo) => {
 
 export const requestCertify = async (
   rawPhoneNumber: string
-): Promise<IrequestSnsMsg> => {
+): Promise<IrequestSnsMsg | string> => {
   try {
     const phoneNumber = formatPhoneNumber(rawPhoneNumber);
 
@@ -64,8 +64,8 @@ export const requestCertify = async (
     const serial = makeSerial();
     await setSerial(phoneNumber, serial);
 
-    console.log(serial);
-    return IrequestSnsMsg.SUCCESS;
+    // return IrequestSnsMsg.SUCCESS;
+    return serial;
   } catch (error) {
     if (error instanceof z.ZodError) {
       return IrequestSnsMsg.FAIL_INVALID;

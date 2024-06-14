@@ -62,8 +62,8 @@ const Page = () => {
   };
 
   const requestSNS = async () => {
-    const msg: IrequestSnsMsg = await requestCertify(phoneNumber);
-    if (msg === IrequestSnsMsg.SUCCESS) {
+    const msg: IrequestSnsMsg | string = await requestCertify(phoneNumber);
+    if (msg.length === 6) {
       setCertifyButton(ICertifyButton.AUTH);
       alert(msg);
       return;
@@ -99,6 +99,9 @@ const Page = () => {
   };
 
   const handleSubmit: MouseEventHandler<HTMLInputElement> = async (e) => {
+    if (name === "") {
+      return alert("이름을 입력해야 합니다.");
+    }
     if (certifyButton !== ICertifyButton.COMPLETE)
       return alert("휴대폰 인증을 먼저 진행해야 합니다.");
     if (!agreement1)
