@@ -23,6 +23,7 @@ import "../styles/swiper-bundle.min.css";
 import "../styles/sub.css";
 import "../styles/interest.css";
 import "../styles/addition.css";
+import { useFormStatus } from "react-dom";
 
 const formatTime = (seconds: number) => {
   const minutes = Math.floor(seconds / 60);
@@ -45,6 +46,7 @@ const Page = () => {
   const [agreement2, setAgreement2] = useState<boolean>(false);
 
   const [time, setTime] = useState(360); // 6분 = 360초
+  const [pending, setPending] = useState(false);
 
   const [isPop, setIsPop] = useState(false);
 
@@ -62,7 +64,9 @@ const Page = () => {
   };
 
   const requestSNS = async () => {
+    setPending(true);
     const msg: IrequestSnsMsg | string = await requestCertify(phoneNumber);
+    setPending(false);
     if (msg.length === 6) {
       setCertifyButton(ICertifyButton.AUTH);
       alert(msg);
@@ -73,10 +77,12 @@ const Page = () => {
   };
 
   const requestAuthenticate = async () => {
+    setPending(true);
     const msg: IAuthenticateMsg = await authenticate(
       phoneNumber,
       certifiNumber
     );
+    setPending(false);
     if (msg === IAuthenticateMsg.SUCCESS) {
       setCertifyButton(ICertifyButton.COMPLETE);
       alert(msg);
@@ -106,12 +112,15 @@ const Page = () => {
       return alert("휴대폰 인증을 먼저 진행해야 합니다.");
     if (!agreement1)
       return alert("(필수) 개인정보 수집 및 이용 등에 동의하셔야 합니다.");
+
+    setPending(true);
     const response = await reserveUser({
       name,
       phoneNumber,
       agreement1,
       agreement2,
     });
+    setPending(false);
     if (response === IReserveMsg.SUCCESS) {
       alert("등록이 완료되었습니다!");
       return window.location.reload();
@@ -237,7 +246,9 @@ const Page = () => {
                         className="auth_btn"
                         value={certifyButton}
                         onClick={HandleCertifyButton}
-                        disabled={certifyButton === ICertifyButton.COMPLETE}
+                        disabled={
+                          pending || certifyButton === ICertifyButton.COMPLETE
+                        }
                       />
                     </div>
                   </td>
@@ -436,6 +447,7 @@ const Page = () => {
               className="submit_btn1"
               value="등록하기"
               onClick={handleSubmit}
+              disabled={pending}
             />
             &nbsp;
             <input
@@ -445,6 +457,7 @@ const Page = () => {
               onClick={() => {
                 window.location.reload();
               }}
+              disabled={pending}
             />
           </div>
         </form>

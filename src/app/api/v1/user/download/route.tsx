@@ -7,7 +7,7 @@ import { formatGMTDate } from "@/server/service";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     console.log("get download...");
     const users: User[] = await db.user.findMany();
