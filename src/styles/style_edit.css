@@ -1,0 +1,1090 @@
+@charset "utf-8";
+
+/***************************************************************************************************
+common
+***************************************************************************************************/
+.header_modal_logo {
+  left: 120px;
+}
+.header_modal_gnb {
+  width: auto;
+  margin-right: 60px;
+  right: 0;
+}
+.header_modal_gnb_1depth {
+  margin: 0 60px 80px 0 !important;
+}
+.header_modal_gnb_1depth:nth-child(3n) {
+}
+.header_modal_gnb_1depth > a {
+  width: 145px;
+  padding-bottom: 13px;
+}
+.header_modal_gnb_1depth:last-of-type a {
+  line-height: 120%;
+}
+.header_modal_gnb_1depth:last-of-type a br {
+  display: block;
+}
+.header_modal_gnb_2depth {
+  margin-top: 30px;
+}
+.header_modal_gnb_2depth li {
+  margin-bottom: 20px;
+}
+.header_modal_gnb_2depth a {
+  letter-spacing: -1px;
+}
+.header_modal_fnb {
+  width: 820px;
+  right: 60px;
+}
+@media (max-width: 1299px) {
+  .header_modal_gnb {
+    width: 410px;
+    margin-right: 0;
+  }
+  .header_modal_fnb {
+    width: 410px;
+    right: 0;
+  }
+  .header_modal_gnb_1depth:nth-child(2n) {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 1000px) {
+  .tab_nav li {
+    height: 60px;
+  }
+  .tab_nav li a {
+    line-height: 60px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 889px) {
+  .header_modal_logo {
+    left: 70px;
+    width: 100px;
+  }
+  .header_modal_gnb {
+    width: 360px;
+  }
+  .header_modal_fnb {
+    width: 360px;
+    top: unset;
+    left: unset;
+    bottom: 50px;
+  }
+  .header_modal_fnb li {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .header_modal_fnb li a {
+    font-size: 12px;
+  }
+  .header_modal_gnb_1depth > a {
+    font-size: 24px;
+    width: 120px;
+  }
+  .header_modal_gnb_1depth {
+    margin: 0 50px 60px 0 !important;
+  }
+  .header_modal_gnb_2depth a {
+    font-size: 16px;
+  }
+  .header_modal_gnb_2depth li {
+    margin-bottom: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .header_default {
+    top: 28px;
+  }
+  .tab_nav li a {
+    font-size: 16px;
+  }
+  .header_default_logo {
+    left: 20px;
+  }
+  .header_default_logo a img {
+    max-width: 100%;
+    width: 75px !important;
+  }
+  .header_default_tnb {
+    top: -5px;
+    right: 49px;
+  }
+  .header_modal_open {
+    top: 1.8px;
+    right: 20px;
+  }
+  .header_modal_close {
+    right: 30px;
+    top: calc(30px + 7px);
+  }
+  .footer_logo,
+  .footer_address {
+    left: 20px;
+  }
+  .footer_sns,
+  .footer_family,
+  .footer_copyright {
+    right: 20px;
+  }
+}
+@media (max-width: 629px) {
+  .header_modal_logo img {
+    display: block;
+    width: 100%;
+  }
+  .header_modal_gnb {
+    width: 190px;
+  }
+  .header_modal_fnb {
+    width: auto;
+    left: 70px;
+    bottom: unset;
+    right: unset;
+    top: 360px;
+  }
+  .header_modal_gnb_1depth {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 450px) {
+  .footer_address dd {
+    width: 70%;
+  }
+  .footer_address dd a {
+    line-height: 20px;
+  }
+}
+@media (max-width: 429px) {
+  .header_modal_logo {
+    left: 40px;
+    width: 80px;
+  }
+  .header_modal_fnb {
+    left: 40px;
+  }
+  .header_modal_gnb {
+    width: 160px;
+  }
+}
+@media (max-width: 425px) {
+  .tab_nav li {
+    height: 50px;
+  }
+  .tab_nav li a {
+    line-height: 50px;
+    font-size: 14px;
+  }
+}
+
+/***************************************************************************************************
+layout
+***************************************************************************************************/
+
+/***************************************************************************************************
+main page
+***************************************************************************************************/
+.intro_notice_fraction {
+  top: 28px;
+}
+.intro_notice_list {
+  top: 70px;
+}
+.intro_notice_list li a small {
+  margin-top: 5px;
+}
+@media (max-width: 1000px) {
+  .intro_movie_mute {
+    left: 50px;
+  }
+  .sns_list strong {
+    padding-left: 45px;
+  }
+  .sns_list p {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 640px) {
+  .intro_movie_mute {
+    left: 30px;
+  }
+  .sns_recent {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+  .sns_quick {
+    width: calc(100% - 60px);
+    margin: 70px 30px 0;
+  }
+  .sns_list p {
+    width: calc(100% - 20px);
+  }
+  .sns_list time {
+    position: relative;
+    display: block;
+    right: auto;
+    top: auto !important;
+    margin-left: 45px;
+    margin-top: 8px;
+  }
+}
+@media (max-height: 800px) {
+  .sns_icon {
+    top: 24px;
+  }
+  .sns_list time {
+    top: 48px;
+  }
+}
+@media (max-width: 640px) and (max-height: 800px) {
+  .sns_quick dt {
+    margin-top: 1px;
+  }
+}
+
+/***************************************************************************************************
+sub common
+***************************************************************************************************/
+/**/
+.visual.user {
+  background: #f5f5f5 url("/image/sub/user/user_visual.jpg") no-repeat center
+    top/auto 100%;
+}
+.visual.user .visual_nav nav a {
+  width: calc(100% / 3 - 1px + (1px / 3));
+}
+/*.visual_nav nav { display: table; }
+.visual_nav nav a { display: table-cell; vertical-align: middle; height: 80px; line-height: 100%; }*/
+@media (max-width: 1200px) {
+  .visual_nav {
+    width: calc(100% - 50px * 2);
+    left: 50px;
+  }
+}
+@media (max-width: 900px) {
+  /*.visual_nav nav a { padding-top: 0; height: 60px; }*/
+  .visual.brand .visual_nav nav a {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .visual.brand .visual_nav nav a:last-child {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .visual.brand .visual_nav nav a:last-child span {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .visual.brand .visual_nav nav a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .visual.brand .visual_nav nav a:last-child {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 640px) {
+  .visual_nav {
+    width: calc(100% - 30px * 2);
+    left: 30px;
+  }
+  .visual.brand .visual_nav nav a {
+    font-size: 13px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /*
+	여백
+	*/
+  /*브랜드*/
+  .story main.layout,
+  .life main.layout,
+  .sub_trend main.layout,
+  .identity main.layout,
+  .news main.layout {
+    width: calc(100% - 30px * 2) !important;
+  }
+  /*분양안내*/
+  .sale main.layout,
+  .guide main.layout,
+  .coop main.layout,
+  .coop_info main.layout {
+    width: calc(100% - 30px * 2) !important;
+  }
+  /*현장안내*/
+  .work main.layout,
+  .record main.layout {
+    width: calc(100% - 30px * 2) !important;
+  }
+}
+@media (max-width: 425px) {
+  .visual.brand .visual_nav nav a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .visual.brand .visual_nav nav a:last-child {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+@media (max-width: 640px) {
+  .news main.layout,
+  .sale main.layout,
+  .guide main.layout,
+  .coop main.layout,
+  .coop_info main.layout {
+    margin-top: 50px !important;
+  }
+}
+
+/***********************************************************
+story
+************************************************************/
+@media (max-width: 640px) {
+  .story_section_intro_text2 {
+    font-size: 20px;
+  }
+  .story_section_intro_text2 strong {
+    font-size: 40px;
+  }
+  .story_section_title {
+    font-size: 45px;
+  }
+  .story_section_caption {
+    font-size: 22px;
+  }
+  .story_section_comment {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .js-simplified .trend--paraimg {
+    overflow: visible;
+  }
+  .js-simplified .trend--item.-left .trend--transimg {
+    overflow: visible;
+  }
+  .js-simplified .trend--item.-right .trend--transimg {
+    overflow: visible;
+  }
+}
+
+/***********************************************************
+trend
+************************************************************/
+/*.trend_filter li { padding: 23px 0 18px 0; } */
+.trend_filter li {
+  padding: 23px 0 13px 0;
+}
+.trend_filter_switch p {
+  margin-right: 0;
+  width: 96px;
+}
+.trend_filter_category p {
+  vertical-align: top;
+}
+.trend_filter_category_list {
+  width: calc(100% - 96px);
+}
+.trend_filter_category_list span {
+  margin-bottom: 5px;
+}
+
+.trend_list_subheading {
+  top: 12.834%;
+}
+.trend_list_title {
+  top: 23.529%;
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .trend_list_title {
+    font-size: 2.1vw;
+  }
+}
+@media (min-width: 1001px) {
+  .trend_filter_submit {
+    right: 6%;
+    bottom: calc(50% - 120px);
+  }
+}
+@media (max-width: 800px) {
+  .trend_filter {
+    margin-top: 85px;
+  }
+  .trend_list_subheading {
+    left: 12%;
+  }
+  .trend_list_title {
+    font-size: 20px;
+    left: 12%;
+  }
+}
+@media (max-width: 640px) {
+  .trend_filter {
+    margin-top: 55px;
+  }
+  .trend_filter_switch p {
+    font-size: 15px;
+    width: 85px;
+  }
+  .trend_search {
+    height: 40px;
+    width: 230px;
+  }
+  .trend_search_str {
+    height: 40px;
+  }
+  .trend_search img {
+    width: 40px;
+  }
+  .trend_filter_category p {
+    font-size: 15px;
+    width: 85px;
+  }
+  .trend_filter_category_list span {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  .trend_filter_category_list div span {
+    margin-bottom: 5px;
+  }
+  .trend_filter_period p {
+    font-size: 15px;
+    width: 85px;
+  }
+  .trend_filter_period mark:after {
+    font-size: 11px;
+    white-space: normal;
+  }
+  .trend_filter_period mark:nth-of-type(2):after,
+  .trend_filter_period mark:nth-of-type(3):after,
+  .trend_filter_period mark:nth-of-type(4):after {
+    left: -8px;
+  }
+}
+@media (max-width: 475px) {
+  .trend_search {
+    width: 42.187%;
+  }
+  .trend_search_str::placeholder {
+    color: #eee;
+    opacity: 0;
+  }
+  .trend_filter_submit_btn {
+    width: 130px;
+    font-size: 13px;
+  }
+  .trend_filter_submit_reset {
+    right: -5px;
+    padding: 9px 5px;
+    font-size: 13px;
+    line-height: 16px;
+    width: 60px;
+  }
+}
+/***********************************************************
+trend_view
+************************************************************/
+@media (max-width: 1000px) {
+  .trend_content_visual_subheading {
+    left: 8%;
+  }
+  .trend_content_visual_case {
+    top: 405px;
+    left: 8%;
+  }
+  .trend_content_visual_title {
+    top: 465px;
+    left: 8%;
+    font-size: 34px;
+  }
+  .trend_content_visual_title small {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .trend_content_visual_subheading {
+  }
+  .trend_content_visual_case {
+    font-size: 15px;
+  }
+  .trend_content_visual_title {
+    font-size: 26px;
+  }
+  .trend_content_visual_title small {
+    font-size: 16px;
+  }
+
+  .trend_content_paragraph_subheading {
+    font-size: 15px;
+  }
+  .trend_content_paragraph_title {
+    font-size: 22px;
+  }
+  .trend_content_paragraph_text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/***********************************************************
+identity
+************************************************************/
+.identity_bi_text {
+  line-height: 30px;
+}
+@media (min-width: 1001px) {
+  .identity_bi_text.ibt1 {
+    width: 660px;
+  }
+}
+@media (max-width: 1000px) {
+  .identity_bi_text.ibt1 {
+  }
+}
+
+/***********************************************************
+news/pr
+************************************************************/
+.news_list li {
+  padding-left: 0;
+}
+.news_list li mark {
+  line-height: 1;
+}
+.news_view_time {
+  display: block;
+  margin-top: 10px;
+}
+.news_view_content {
+  line-height: 30px;
+  padding-right: 30px;
+}
+.pr_list_title {
+  width: calc(100% - 100px);
+  font-size: 18px;
+  font-weight: 300;
+  text-overflow: unset;
+  white-space: normal;
+  line-height: 22px;
+}
+.pr_list li:hover .pr_list_title {
+  font-weight: 500;
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .pr_view_close {
+    top: 50%;
+    left: 90%;
+    margin: -305px 0 0 20px;
+  }
+  .pr_view iframe {
+    top: 50%;
+    left: 5%;
+    margin: -275px 0 0 0;
+    width: 90%;
+    height: 550px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news .apt_search {
+    top: 120px !important;
+  }
+  .news_list {
+    margin-top: 130px;
+  }
+
+  .pr_list {
+    margin-top: 130px;
+  }
+  .pr_list_category {
+    left: 9%;
+    top: 25%;
+  }
+  .pr_list_title {
+    left: 9%;
+    top: 38%;
+  }
+}
+@media (max-width: 640px) {
+  .news .apt_search {
+    width: 240px;
+  }
+  .news_list li {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  .news_list li mark {
+    padding: 2px 5px;
+    font-size: 11px;
+    line-height: 18px;
+    margin-right: 10px;
+  }
+  .news_list li span {
+    line-height: 50px;
+    width: calc(100% - 130px);
+  }
+  .news_list li time {
+    font-size: 13px;
+  }
+}
+
+/***********************************************************
+sale/coop/work/record/pr
+************************************************************/
+.apt_filter li {
+  padding: 23px 0 13px 0;
+}
+.apt_filter_switch p {
+  margin-right: 0;
+  width: 96px;
+}
+.apt_filter_switch > a > img {
+  height: 18px;
+}
+.trend_filter_switch > a > img {
+  height: 18px;
+}
+.apt_filter_category_list {
+  width: calc(100% - 96px);
+}
+.apt_filter_category_list span {
+  margin-bottom: 10px;
+  padding: 4px 11px;
+  line-height: 1;
+}
+.trend_filter_category_list span {
+  margin-bottom: 10px;
+  padding: 4px 11px;
+  line-height: 1;
+}
+.apt_list_info::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.apt_list_btns {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.apt_list_info li span i {
+  display: inline-block;
+}
+
+@media (min-width: 1001px) {
+  .apt_filter_submit {
+    right: 6%;
+    bottom: calc(50% - 120px);
+  }
+}
+@media (max-width: 800px) {
+  .apt_filter {
+    margin-top: 85px;
+  }
+  .apt_list_info {
+    width: calc(100% - 15%);
+  }
+  .apt_list_title {
+    font-size: 20px;
+  }
+  .apt_list_btns {
+    width: calc(100% - 15%);
+  }
+}
+@media (max-width: 640px) {
+  .apt_filter {
+    margin-top: 55px;
+  }
+  .apt_filter_switch p {
+    font-size: 15px;
+    width: 85px;
+  }
+  .apt_search {
+    height: 40px;
+    width: 230px;
+  }
+  .apt_search_str {
+    height: 40px;
+  }
+  .apt_search img {
+    width: 40px;
+  }
+  .apt_filter_category p {
+    font-size: 15px;
+    width: 85px;
+  }
+  .apt_filter_category_list span {
+    font-size: 13px; /*padding: 6px 10px;*/
+  }
+  .apt_filter_category_list div span {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 475px) {
+  .apt_search {
+    width: 42.187%;
+  }
+  .apt_search_str::placeholder {
+    color: #eee;
+    opacity: 0;
+  }
+  .apt_filter_submit_btn {
+    width: 130px;
+    font-size: 13px;
+  }
+  .apt_filter_submit_reset {
+    right: -5px;
+    padding: 9px 5px;
+    font-size: 13px;
+    line-height: 16px;
+    width: 60px;
+  }
+}
+
+/***********************************************************
+guide
+************************************************************/
+.guide_info_list_text u {
+  padding-right: 50px;
+}
+.guide_info_list_text small {
+  padding-right: 50px;
+}
+@media (max-width: 1000px) {
+  .guide_visual_title {
+    left: 8%;
+    font-size: 34px;
+  }
+  .guide_visual_text {
+    left: 8%;
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+@media (max-width: 640px) {
+  .guide .tab_nav {
+    width: calc(100% - 30px * 2) !important;
+    margin-bottom: 40px !important;
+  }
+  .guide main.layout {
+    margin: 40px auto 0;
+  }
+  .guide_visual_title {
+    top: 64.23%;
+    font-size: 24px;
+  }
+  .guide_visual_text {
+    top: 75.307%;
+    font-size: 14px;
+  }
+  .guide_links {
+    margin-top: 60px;
+  }
+  .guide_links li p {
+    left: 8%;
+    font-size: 18px;
+  }
+  .guide_links li a {
+    left: 8%;
+  }
+  .guide_notice {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .guide_info_list_text h3 {
+    left: 30px;
+  }
+  .guide_info_list_text p {
+    left: 30px;
+  }
+  .guide_info_list_text u {
+    left: 30px;
+  }
+  .guide_info_list_text span {
+    left: 30px;
+  }
+  .guide_info_list_text small {
+    left: 30px;
+  }
+}
+
+/***********************************************************
+coop_info
+************************************************************/
+@media (max-width: 1000px) {
+  .coop_info_visual_title {
+    left: 8%;
+    font-size: 34px;
+  }
+  .coop_info_visual_text {
+    left: 8%;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .coop_info_process li h2 {
+    margin: 30px auto 0;
+    font-size: 19px;
+    width: calc(100% - 15%);
+  }
+  .coop_info_process li p {
+    font-size: 15px;
+    width: calc(100% - 15%);
+    padding-right: 50px;
+  }
+}
+@media (max-width: 640px) {
+  .coop_info .tab_nav {
+    width: calc(100% - 30px * 2) !important;
+    margin-bottom: 40px !important;
+  }
+  .coop_info main.layout {
+    margin: 40px auto 0;
+  }
+  .coop_info_visual_comment {
+    left: 8%;
+  }
+  .coop_info_visual_title {
+    top: 535px;
+    font-size: 26px;
+  }
+  .coop_info_visual_text {
+    top: 460px;
+    font-size: 14px;
+  }
+  .coop_info_article {
+    margin-top: 60px;
+  }
+  .coop_info_article:first-child {
+    margin-top: 90px;
+  }
+  .coop_info_article h1 {
+    font-size: 22px;
+  }
+  .coop_info_article div {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/***********************************************************
+work
+************************************************************/
+.work .apt_list_interest {
+  top: 65px;
+}
+/***********************************************************
+work_view
+************************************************************/
+@media (max-width: 1000px) {
+  .work_view_title {
+    font-size: 32px;
+  }
+  .work_view_links a img {
+    width: 50px;
+  }
+
+  .work_view_select {
+    top: -5px;
+    width: 260px;
+    height: 50px;
+  }
+  .work_select_date {
+    font-size: 17px;
+    line-height: 50px;
+  }
+  .work_view_select_box {
+    top: 30px;
+    width: calc(100% - 50px);
+  }
+  .work_view_select_option {
+    font-size: 17px;
+  }
+  .work_view_select a {
+    width: 50px;
+    height: 50px;
+  }
+  .work_view_select a img {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .work_view_title {
+    font-size: 25px;
+    width: calc(100% - 100px);
+  }
+  .work_view_links a img {
+    width: 40px;
+  }
+  .work_view_info_rate strong {
+    font-size: 30px;
+  }
+
+  .work_view_currnet_month {
+    font-size: 21px;
+  }
+  .work_view_select {
+    width: 39.25%;
+    background-size: 15px !important;
+    background-position: right 60px center !important;
+  }
+  .work_select_date {
+    font-size: 15px;
+    text-indent: 16%;
+  }
+  .work_view_select_box {
+  }
+  .work_view_select_box:before {
+    left: 16%;
+    width: calc(100% - 16% - 27.466%);
+  }
+  .work_view_select_option {
+    font-size: 15px;
+    line-height: 30px;
+    text-indent: 16%;
+  }
+  .work_view_select a {
+    width: 50px;
+    height: 50px;
+  }
+  .work_view_select a img {
+    width: 100%;
+  }
+
+  .work_view_monthly_text {
+    padding: 6%;
+  }
+  .work_view_monthly_text h3 {
+    font-size: 21px;
+  }
+  .work_view_monthly_textarea {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+@media (max-width: 530px) {
+  .work_view_currnet_month {
+    width: calc(100% - 185px);
+  }
+  .work_view_select {
+    width: 185px;
+  }
+}
+@media (max-width: 425px) {
+  .work_view_currnet_month {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .work_view_select {
+    position: relative;
+    float: right;
+    top: auto;
+    right: auto;
+  }
+  .work_view_select::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .work_view_image {
+    margin-top: 90px;
+  }
+}
+
+/***********************************************************
+record
+************************************************************/
+@media (max-width: 1200px) {
+  .record_list_info p strong {
+    flex: 0 0 70px;
+    width: 70px;
+  }
+  .record_list_info p span {
+    flex: 0 0 calc(100% - 70px);
+  }
+  .record_list_info time {
+    position: relative;
+    top: auto;
+    right: auto;
+    padding-left: 25px;
+  }
+  .record_list_info time br {
+    display: none;
+  }
+}
+@media (max-width: 810px) {
+  .record_list > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+  .record_list_title {
+    flex: 0 1 100%;
+    height: auto;
+    min-height: auto;
+    padding: 10px 0;
+  }
+  .record_list_info {
+    flex: 0 1 100%;
+    padding: 15px 0;
+  }
+  .record_list_info p strong {
+    flex: 0 0 100%;
+  }
+  .record_list_info p span {
+    margin-bottom: 2px;
+    flex: 0 0 100%;
+  }
+}
+
+/***********************************************************
+USER
+************************************************************/
+.privacy main.layout {
+  position: relative;
+  width: calc(100% - 100px);
+  max-width: 1200px;
+  margin: 70px auto 0;
+  z-index: 9999;
+}
+.guidelines main.layout {
+  position: relative;
+  width: calc(100% - 100px);
+  max-width: 1200px;
+  margin: 70px auto 0;
+  z-index: 9999;
+}
+.email-security main.layout {
+  position: relative;
+  width: calc(100% - 100px);
+  max-width: 1200px;
+  margin: 70px auto 0;
+  z-index: 9999;
+}
+
+.interest main.layout {
+  position: relative;
+  width: calc(100% - 100px);
+  max-width: 1200px;
+  margin: 70px auto 0;
+  z-index: 9999;
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 640px) {
+}

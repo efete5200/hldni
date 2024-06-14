@@ -1,0 +1,607 @@
+/***************************************************************************************************
+ 브랜드 BI
+***************************************************************************************************/
+/* Bi 레이아웃 */
+.bi_inner {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  z-index: 999999999;
+}
+
+/* Bi 타이틀 */
+.bi_tit_wrap {
+  margin-top: 120px;
+  position: relative;
+  height: 370px;
+  background: url("/image/sub/brand/new_bi_tit_bg.jpg") #3a3435 no-repeat top
+    center;
+  background-size: cover;
+}
+.bi_tit_wrap .bi_visual {
+  position: absolute;
+  left: 60px;
+  bottom: 50px;
+  transition: all 0.5s;
+}
+.bi_tit_wrap .bi_visual span {
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.5s;
+}
+.bi_tit_wrap .bi_visual p {
+  padding-top: 7px;
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.logo_area {
+  margin-top: 0px !important;
+  padding-top: 130px;
+  text-align: center;
+  transition: all 0.5s;
+}
+.logo_area .logo {
+  margin-bottom: 100px;
+}
+.logo_area .logo img {
+  width: 320px;
+  transition: all 0.5s;
+}
+.logo_area .txt p {
+  margin-bottom: 55px;
+  font-size: 16px;
+  color: #fff !important;
+  line-height: 2;
+  transition: all 0.5s;
+}
+.logo_area .txt p + p {
+  margin-bottom: 120px;
+  transition: all 0.5s;
+}
+.logo_area .txt p strong {
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.bi_down_btn {
+  position: relative;
+}
+.bi_down_btn a {
+  padding: 20px 44px;
+  display: inline-block;
+  background: #1d1f1f;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.5s;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.bi_down_btn a:hover {
+  box-shadow: 10px 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+.bi_down_btn a img {
+  margin-left: 18px;
+  display: inline-block;
+  transform: translateY(3px);
+}
+
+.logo_area .bi_down_btn:after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #ececec;
+  content: "";
+  z-index: -1;
+}
+
+/* 그리드 시스템 & 최소공간 규정 */
+.grid_area h3 {
+  margin-top: 110px;
+  margin-bottom: 45px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff !important;
+  transition: all 0.5s;
+}
+.grid_area h3 span {
+  margin-bottom: 3px;
+  display: block;
+  font-size: 15px;
+  color: #c6c2c2;
+  font-weight: 500;
+}
+.grid_area .txt {
+  margin-bottom: 70px;
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.grid_area .txt p {
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+.grid_area .txt p + p {
+  margin-top: 25px;
+}
+
+.grid_img {
+  display: flex;
+  margin-bottom: 120px;
+  transition: all 0.5s;
+}
+.grid_img > div {
+  flex: 1;
+}
+.grid_img > div > p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #dba17d;
+  font-weight: 600;
+}
+
+.grid_img .item_L {
+  margin-right: 40px;
+}
+.grid_img .item_L .img_box {
+  height: 242px;
+  position: relative;
+  background: url("/image/sub/brand/new_grid_bg.jpg");
+  border: 1px solid #959494;
+  transition: all 0.5s;
+}
+.grid_img .item_L .img_box img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  transition: all 0.5s;
+}
+.grid_img .item_R .img_box img {
+  max-width: 100%;
+}
+
+/* 컬러 시스템 */
+.color_system {
+  padding: 105px 0 120px;
+  background: #f5f3f2;
+  transition: all 0.5s;
+}
+.color_system_area h3 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #dba17d;
+  transition: all 0.5s;
+}
+.color_system_area h3 span {
+  margin-bottom: 3px;
+  display: block;
+  font-size: 15px;
+  color: #dba17d;
+  font-weight: 500;
+}
+.color_system_area .txt_box strong {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff !important;
+}
+.color_system_area .txt_box p {
+  font-size: 16px;
+  color: #fff !important;
+  line-height: 2;
+}
+.color_system_area .sub_tit_box01 {
+  margin-bottom: 90px;
+  transition: all 0.5s;
+}
+
+.color_chip {
+  margin-top: 25px;
+  margin-bottom: 65px;
+  transition: all 0.5s;
+}
+.color_chip .color01 {
+  padding: 40px 37px;
+  height: 280px;
+  background: #3f3536;
+  transition: all 0.5s;
+}
+.color_chip .color01 p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.color_chip .color01 span {
+  font-size: 15px;
+  font-weight: 300;
+}
+.color_chip .color01 b {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.color_chip .color02 {
+  display: flex;
+}
+.color_chip .color02 li {
+  flex: 1;
+  position: relative;
+  height: 75px;
+  transition: all 0.5s;
+}
+.color_chip .color02 li span {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.color_chip .color02 li span.cl_bl {
+  color: #3f3536 !important;
+}
+.color_chip .color02 li span.cl_wh {
+  color: #fff !important;
+}
+.color02 .cl_01 {
+  background: #e1dedd;
+}
+.color02 .cl_02 {
+  background: #c6c2c2;
+}
+.color02 .cl_03 {
+  background: #b0abab;
+}
+.color02 .cl_04 {
+  background: #9b9596;
+}
+.color02 .cl_05 {
+  background: #888183;
+}
+.color02 .cl_06 {
+  background: #767070;
+}
+.color02 .cl_07 {
+  background: #665e60;
+}
+.color02 .cl_08 {
+  background: #564f50;
+}
+.color02 .cl_09 {
+  background: #484142;
+}
+.color02 .cl_10 {
+  background: #3f3536;
+}
+
+.color_chip .color03 {
+  background: #272725;
+}
+
+.metallic_chip {
+  display: flex;
+  margin-bottom: 0 !important;
+  transition: all 0.5s;
+}
+.metallic_chip > div {
+  flex: 1;
+  transition: all 0.5s;
+}
+.metallic_chip .color04 {
+  background: url("/image/sub/brand/new_metallic_01.jpg") center center;
+  background-size: cover;
+}
+.metallic_chip .color05 {
+  background: url("/image/sub/brand/new_metallic_02.jpg") center center;
+  background-size: cover;
+}
+
+/* 응용 디자인 */
+.app_design_wrap {
+  padding-top: 110px;
+  transition: all 0.5s;
+}
+.app_design_wrap h3 {
+  padding-bottom: 55px;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.5s;
+  color: #fff !important;
+}
+.app_design_wrap h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  content: "";
+}
+.app_design_wrap .app_design_box {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.app_design_wrap .app_design_box > div {
+  flex: 1 0 40%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+}
+.app_design_wrap .app_design_box > div:nth-child(2n) {
+  margin-right: 0 !important;
+}
+.app_design_wrap .app_design_box > div img {
+  max-width: 100%;
+}
+.app_design_wrap .note {
+  font-size: 15px;
+  color: #ddd !important;
+  text-align: right;
+}
+
+/***********************************************************
+ 브랜드 Bi  responsive
+************************************************************/
+
+@media all and (max-width: 1200px) {
+  /* Bi 레이아웃 */
+  .bi_inner {
+    width: 90%;
+  }
+
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_img .item_L .img_box {
+    height: calc(20vw - 22px);
+  }
+  .grid_img .item_L .img_box img {
+    width: calc(30vw - 10px);
+  }
+}
+@media all and (max-width: 1000px) {
+  /* Bi 타이틀 */
+  .bi_tit_wrap {
+    height: 300px;
+  }
+  .bi_tit_wrap .bi_visual {
+    left: 35px;
+    bottom: 30px;
+  }
+  .logo_area {
+    margin-top: 85px;
+  }
+  .logo_area .logo {
+    margin-bottom: 50px;
+  }
+  .logo_area .logo img {
+    width: 270px;
+  }
+  .logo_area .txt p,
+  .logo_area .txt p strong {
+    font-size: calc(1vw + 12px);
+  }
+  .logo_area .txt p {
+    margin-bottom: 35px;
+  }
+  .logo_area .txt p + p {
+    margin-bottom: 70px;
+  }
+  .bi_down_btn a {
+    padding: 20px 35px;
+  }
+
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_area h3 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  .grid_area .txt {
+    margin-bottom: 50px;
+    padding: 45px 0;
+  }
+  .grid_area .txt p + p {
+    margin-top: 20px;
+  }
+  .grid_img {
+    margin-bottom: 90px;
+  }
+
+  /* 컬러 시스템 */
+  .color_system {
+    padding: 90px 0 100px;
+  }
+  .color_system_area h3 {
+    margin-bottom: 20px;
+  }
+  .color_system_area .sub_tit_box01 {
+    margin-bottom: 70px;
+  }
+  .color_system_area .txt_box br {
+    display: none;
+  }
+
+  /* 응용 디자인 */
+  .app_design_wrap {
+    padding-top: 80px;
+  }
+  .app_design_wrap h3 {
+    padding-bottom: 40px;
+    font-size: 28px;
+  }
+}
+@media all and (max-width: 810px) {
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_area .txt p br {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) {
+  /* Bi 타이틀 */
+  .logo_area .logo img {
+    width: 240px;
+  }
+  .logo_area .txt p,
+  .logo_area .txt p strong {
+    font-size: 16px;
+  }
+
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_img {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid_img > div {
+    flex: 0 0 90%;
+  }
+  .grid_img .item_L {
+    margin-bottom: 50px;
+    margin-right: 0;
+  }
+  .grid_img .item_L .img_box {
+    height: 215px;
+  }
+  .grid_img .item_L .img_box img {
+    width: calc(40vw + 15px);
+  }
+
+  /* 컬러 시스템 */
+  .color_system {
+    padding: 70px 0 80px;
+  }
+  .color_chip {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  .color_chip .color01 {
+    height: 230px;
+    padding: 25px;
+  }
+  .color_chip .color02 {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .color_chip .color02 li {
+    flex: 0 0 100%;
+    height: 45px;
+    text-align: center;
+  }
+  .color_chip .color02 li span {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    right: auto;
+    transform: translateY(-50%);
+  }
+
+  .metallic_chip {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .metallic_chip > div {
+    flex: 0 0 100%;
+    height: 190px !important;
+  }
+
+  /* 응용 디자인 */
+  .app_design_wrap h3 {
+    font-size: 26px;
+  }
+  .app_design_wrap .app_design_box > div {
+    flex: 1 0 100%;
+    margin-right: 0;
+  }
+  .app_design_wrap .app_design_box > div img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 680px) {
+  /* Bi 타이틀 */
+  .bi_tit_wrap .bi_visual span {
+    font-size: 17px;
+  }
+  .bi_tit_wrap .bi_visual p {
+    font-size: 28px;
+  }
+  .logo_area .txt p br {
+    display: none;
+  }
+  .bi_down_btn a {
+    padding: 15px 30px;
+  }
+}
+@media all and (max-width: 580px) {
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_img .item_L .img_box {
+    height: 170px;
+  }
+}
+@media all and (max-width: 480px) {
+  /* Bi 타이틀 */
+  .bi_tit_wrap .bi_visual {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .logo_area .logo img {
+    width: 200px;
+  }
+
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_img .item_L {
+    margin-bottom: 30px;
+  }
+  .grid_img {
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 420px) {
+  /* 그리드 시스템 & 최소공간 규정 */
+  .grid_area h3 {
+    text-align: center;
+  }
+  .grid_area .txt {
+    margin-bottom: 35px;
+    padding: 35px 0;
+  }
+  .grid_img .item_L .img_box {
+    height: 120px;
+  }
+
+  /* 컬러 시스템 */
+  .color_system_area h3,
+  .color_system_area .sub_tit_box01 {
+    text-align: center;
+  }
+
+  /* 응용 디자인 */
+  .app_design_wrap h3 {
+    padding-bottom: 25px;
+    text-align: center;
+  }
+}

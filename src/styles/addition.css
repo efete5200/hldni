@@ -1,0 +1,52 @@
+.auth_wrap {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  margin-top: 10px;
+}
+
+.auth_wrap .auth_btn {
+  background: #7d664e;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+
+  width: 115px;
+  height: 40px;
+}
+
+.auth_wrap .auth_btn:hover {
+  background: #5a4a3a;
+}
+
+.auth_wrap .auth_btn:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
+.auth_wrap .timer {
+  position: absolute;
+
+  margin-top: 4px;
+  top: 50%;
+  left: 190px;
+
+  transform: translateY(-50%);
+  color: gray;
+}
+
+@media screen and (max-width: 425px) {
+  .auth_wrap .auth_btn {
+    width: 90px;
+  }
+  .auth_wrap .timer {
+    left: 120px;
+  }
+}
