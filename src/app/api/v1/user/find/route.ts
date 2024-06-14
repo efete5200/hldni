@@ -5,7 +5,13 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const users: User[] = await db.user.findMany();
+    console.log("current time: ", new Date());
+    const users: User[] = await db.user.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+      take: 100,
+    });
 
     return NextResponse.json(users, {
       status: 200,

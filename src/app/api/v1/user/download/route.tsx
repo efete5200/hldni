@@ -7,6 +7,7 @@ import { formatGMTDate } from "@/server/service";
 
 export async function GET() {
   try {
+    console.log("get download...");
     const users: User[] = await db.user.findMany();
     console.log(users.length, db.user.count());
 
