@@ -8,6 +8,7 @@ export enum IrequestSnsMsg {
   SUCCESS = "요청하였습니다.",
   FAIL = "요청에 실패했습니다. 잠시 후 다시 시도해주세요.",
   FAIL_INVALID = "휴대폰 번호는 010, 011, 016, 017, 018, 019로 시작하는 10~11자리 숫자여야 합니다.",
+  FAIL_DUPLICATED = "이미 상담 예약이 완료된 휴대폰 번호입니다.",
 }
 
 export enum IAuthenticateMsg {

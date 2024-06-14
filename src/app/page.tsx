@@ -7,8 +7,13 @@ import React, {
 } from "react";
 import { useRouter } from "next/navigation";
 
-import { IAuthenticateMsg, ICertifyButton, IrequestSnsMsg } from "@/types";
-import { authenticate, requestCertify } from "./action";
+import {
+  IAuthenticateMsg,
+  ICertifyButton,
+  IReserveMsg,
+  IrequestSnsMsg,
+} from "@/types";
+import { authenticate, requestCertify, reserveUser } from "./action";
 
 import "../styles/reset.css";
 import "../styles/style.css";
@@ -91,6 +96,25 @@ const Page = () => {
     event
   ) => {
     setAgreement2(event.target.value === "true");
+  };
+
+  const handleSubmit: MouseEventHandler<HTMLInputElement> = async (e) => {
+    if (certifyButton !== ICertifyButton.COMPLETE)
+      return alert("휴대폰 인증을 먼저 진행해야 합니다.");
+    if (!agreement1)
+      return alert("(필수) 개인정보 수집 및 이용 등에 동의하셔야 합니다.");
+    const response = await reserveUser({
+      name,
+      phoneNumber,
+      agreement1,
+      agreement2,
+    });
+    if (response === IReserveMsg.SUCCESS) {
+      alert("등록이 완료되었습니다!");
+      return window.location.reload();
+    }
+
+    alert(response);
   };
 
   useEffect(() => {
@@ -404,7 +428,12 @@ const Page = () => {
           </div>
 
           <div className="submit_btn clear">
-            <input type="button" className="submit_btn1" value="등록하기" />
+            <input
+              type="button"
+              className="submit_btn1"
+              value="등록하기"
+              onClick={handleSubmit}
+            />
             &nbsp;
             <input
               type="button"

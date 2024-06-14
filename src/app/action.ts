@@ -7,6 +7,7 @@ import { getSerial, setSerial } from "@/server/controller/redis";
 import { makeSerial } from "@/server/service";
 import { IAuthenticateMsg, IReserveMsg, IrequestSnsMsg } from "@/types";
 import { Prisma } from "@prisma/client";
+import db from "@/config/db";
 
 const formatPhoneNumber = (input: string) => {
   const cleanInput = input.replaceAll(/[^0-9]/g, "");
@@ -31,22 +32,12 @@ type UserInfo = {
   agreement2: boolean;
 };
 
-export const reserveUser = async ({
-  name,
-  phoneNumber,
-  agreement1,
-  agreement2,
-}: UserInfo) => {
-  if (!agreement1) return IReserveMsg.FAIL;
+export const reserveUser = async (userInfo: UserInfo) => {
+  if (!userInfo.agreement1) return IReserveMsg.FAIL;
 
   try {
-    await db?.user.create({
-      data: {
-        name,
-        phoneNumber,
-        agreement1,
-        agreement2,
-      },
+    await db.user.create({
+      data: userInfo,
     });
     return IReserveMsg.SUCCESS;
   } catch (error) {
@@ -64,6 +55,10 @@ export const requestCertify = async (
 ): Promise<IrequestSnsMsg> => {
   try {
     const phoneNumber = formatPhoneNumber(rawPhoneNumber);
+
+    const user = await db.user.findUnique({ where: { phoneNumber } });
+    if (user) return IrequestSnsMsg.FAIL_DUPLICATED;
+
     phoneNumberSchema.parse(phoneNumber);
 
     const serial = makeSerial();
