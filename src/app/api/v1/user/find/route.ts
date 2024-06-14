@@ -3,6 +3,8 @@ import { User } from "@prisma/client";
 import db from "@/config/db";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     console.log("current time: ", new Date());

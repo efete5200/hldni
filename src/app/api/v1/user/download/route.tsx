@@ -5,6 +5,8 @@ import db from "@/config/db";
 import { NextResponse } from "next/server";
 import { formatGMTDate } from "@/server/service";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     console.log("get download...");
