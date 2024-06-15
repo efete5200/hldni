@@ -9,9 +9,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
   try {
-    console.log("get download...");
     const users: User[] = await db.user.findMany();
-    console.log(users.length, db.user.count());
 
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet("Users");

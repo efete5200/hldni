@@ -6,11 +6,11 @@ export const makeSerial = () => {
 export function formatGMTDate(gmtDate: Date) {
   const date = new Date(gmtDate);
 
-  const year = date.getUTCFullYear();
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
-  const hours = date.getUTCHours() + 9;
-  const minutes = date.getUTCMinutes();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
 
   const formattedDate = `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`;
 

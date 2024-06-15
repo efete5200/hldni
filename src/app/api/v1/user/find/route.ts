@@ -7,7 +7,6 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    console.log("current time: ", new Date());
     const users: User[] = await db.user.findMany({
       orderBy: {
         createdAt: "desc",
