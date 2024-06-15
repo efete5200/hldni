@@ -134,13 +134,8 @@ input + label:before {
 interest page style
 ********************************************/
 .interest .visual_title {
-  padding-top: 300px;
 }
 @media (max-width: 1000px) {
-  .interest .visual_title {
-    padding-top: 200px;
-    font-size: 30px;
-  }
   .submit_btn input {
     width: 100%;
   }
@@ -165,9 +160,6 @@ interest page style
 }
 
 /*개인정보 테이블*/
-.table_wrap {
-  margin-bottom: 150px;
-}
 .table {
   width: 100%;
   border-top: 2px solid #636363;
@@ -289,13 +281,12 @@ interest page style
 
 /*정보수집 동의*/
 .privacy_wrap {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 .chk_all {
   position: relative;
   width: 100%;
-  padding-bottom: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #000;
 }
 .chk_all span {
@@ -342,14 +333,15 @@ interest page style
 }
 .privacy {
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
-.privacy h3 {
-  font-size: 24px;
+.privacy div h3 {
+  font-size: 18px;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #000;
 }
+
 .document {
   height: 300px;
   overflow: auto;
@@ -386,7 +378,8 @@ interest page style
 /*등록하기*/
 .submit_btn {
   text-align: center;
-  margin-bottom: 50px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .submit_btn input {
   border: 0;
@@ -426,10 +419,10 @@ interest page style
   }
   .table td.heading {
     display: block;
-    padding: 25px 0 0 0;
+    padding: 10px 0 0 0;
   }
   .table td + td {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   .table td .input_txt_last {
     margin-right: 0;
@@ -480,7 +473,7 @@ interest page style
     margin-bottom: 10px;
   }
   .table td .input_txt2 {
-    width: 70px;
+    width: 64px;
   }
 
   .table td .input_txt4 {

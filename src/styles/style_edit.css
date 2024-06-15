@@ -105,7 +105,8 @@ common
     font-size: 16px;
   }
   .header_default_logo {
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .header_default_logo a img {
     max-width: 100%;
@@ -1080,7 +1081,7 @@ USER
   position: relative;
   width: calc(100% - 100px);
   max-width: 1200px;
-  margin: 70px auto 0;
+  margin: 0 auto 0;
   z-index: 9999;
 }
 
