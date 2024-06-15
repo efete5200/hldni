@@ -54,7 +54,6 @@ export const requestCertify = async (
   rawPhoneNumber: string
 ): Promise<IrequestSnsMsg | string> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
     const phoneNumber = formatPhoneNumber(rawPhoneNumber);
 
     const user = await db.user.findUnique({ where: { phoneNumber } });
