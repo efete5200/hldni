@@ -44,6 +44,7 @@ export const reserveUser = async (userInfo: UserInfo) => {
     });
     return IReserveMsg.SUCCESS;
   } catch (error) {
+    console.log(error);
     if (error instanceof Prisma.PrismaClientKnownRequestError) {
       if (error.code === "P2002") {
         return IReserveMsg.FAIL_DUPLICATED;
@@ -72,6 +73,7 @@ export const requestCertify = async (
     // return IrequestSnsMsg.SUCCESS;
     return serial;
   } catch (error) {
+    console.log(error);
     if (error instanceof z.ZodError) {
       return IrequestSnsMsg.FAIL_INVALID;
     }
@@ -92,6 +94,7 @@ export const authenticate = async (
 
     return IAuthenticateMsg.SUCCESS;
   } catch (error) {
+    console.log(error);
     return IAuthenticateMsg.FAIL_SERVER;
   }
 };
