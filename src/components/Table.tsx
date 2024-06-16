@@ -1,4 +1,4 @@
-import { formatGMTDate } from "@/server/service";
+import { formatGMTDate } from "@/utils";
 import { User } from "@prisma/client";
 import React from "react";
 

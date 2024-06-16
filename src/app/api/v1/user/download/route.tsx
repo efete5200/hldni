@@ -3,7 +3,7 @@ import ExcelJS from "exceljs";
 
 import db from "@/config/db";
 import { NextResponse } from "next/server";
-import { formatGMTDate } from "@/server/service";
+import { formatGMTDate } from "@/utils";
 
 export const dynamic = "force-dynamic";
 

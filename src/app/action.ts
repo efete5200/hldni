@@ -4,7 +4,8 @@ import { z } from "zod";
 
 import { phoneNumberSchema } from "@/config/validator";
 import { getSerial, setSerial } from "@/server/controller/redis";
-import { makeSerial, requestMsg } from "@/server/service";
+import { requestMsg } from "@/server/service";
+import { makeSerial } from "@/utils";
 import { IAuthenticateMsg, IReserveMsg, IrequestSnsMsg } from "@/types";
 import { Prisma } from "@prisma/client";
 import db from "@/config/db";
