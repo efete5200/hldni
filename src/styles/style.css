@@ -252,14 +252,13 @@ header.layout {
 /****************************************************************************************************************************************/
 /*footer*/
 .main_footer {
-  background: #535353;
+  background: #ffffff;
   position: relative;
   z-index: 9999;
 }
 .main_footer .inner {
   width: 95%;
   margin: 0 auto;
-  padding: 40px 0 30px 0;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -313,7 +312,6 @@ header.layout {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 50px;
 }
 .main_footer .footer_section02 ul li {
   color: #f1f1f1;

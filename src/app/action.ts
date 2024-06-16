@@ -4,7 +4,7 @@ import { z } from "zod";
 
 import { phoneNumberSchema } from "@/config/validator";
 import { getSerial, setSerial } from "@/server/controller/redis";
-import { makeSerial } from "@/server/service";
+import { makeSerial, requestMsg } from "@/server/service";
 import { IAuthenticateMsg, IReserveMsg, IrequestSnsMsg } from "@/types";
 import { Prisma } from "@prisma/client";
 import db from "@/config/db";
@@ -31,6 +31,8 @@ type UserInfo = {
   agreement1: boolean;
   agreement2: boolean;
 };
+
+export const activate = () => {};
 
 export const reserveUser = async (userInfo: UserInfo) => {
   if (!userInfo.agreement1) return IReserveMsg.FAIL;
@@ -63,7 +65,9 @@ export const requestCertify = async (
 
     const serial = makeSerial();
     await setSerial(phoneNumber, serial);
+    console.log(serial);
 
+    // await requestMsg(phoneNumber, serial);
     // return IrequestSnsMsg.SUCCESS;
     return serial;
   } catch (error) {
@@ -82,7 +86,6 @@ export const authenticate = async (
     const phoneNumber = formatPhoneNumber(rawPhoneNumber);
     const saved = await getSerial(phoneNumber);
 
-    console.log(serial);
     if (!saved || saved.toString() !== serial)
       return IAuthenticateMsg.FAIL_AUTH;
 

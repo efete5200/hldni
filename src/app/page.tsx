@@ -5,7 +5,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { useRouter } from "next/navigation";
 
 import {
   IAuthenticateMsg,
@@ -13,7 +12,7 @@ import {
   IReserveMsg,
   IrequestSnsMsg,
 } from "@/types";
-import { authenticate, requestCertify, reserveUser } from "./action";
+import { activate, authenticate, requestCertify, reserveUser } from "./action";
 
 import "../styles/reset.css";
 import "../styles/style.css";
@@ -31,8 +30,6 @@ const formatTime = (seconds: number) => {
 };
 
 const Page = () => {
-  const router = useRouter();
-
   const [certifyButton, setCertifyButton] = useState<ICertifyButton>(
     ICertifyButton.REQUEST
   );
@@ -132,7 +129,7 @@ const Page = () => {
   };
 
   useEffect(() => {
-    // 페이지가 로드될 때마다 맨 위로 스크롤
+    activate();
     window.scrollTo(0, 0);
   }, []);
 
@@ -145,7 +142,7 @@ const Page = () => {
   }, [certifyButton, time]);
 
   return (
-    <body className="flex justify-center bg-gray-50">
+    <body className="flex justify-center">
       <div className="max-w-xl min-h-full sub interest bg-white">
         <div className="visual user">
           <a
@@ -444,7 +441,7 @@ const Page = () => {
               )}
             </div>
 
-            <div className="submit_btn mr-7 sm:mr-0">
+            <div className="submit_btn mr-7 sm:mr-0 mb-[-20px]">
               <input
                 type="button"
                 className="submit_btn1"
@@ -456,81 +453,15 @@ const Page = () => {
           </form>
         </main>
 
-        <footer className="layout">
+        <footer className="bg-white">
           <footer className="main_footer">
             <div className="inner">
-              <div className="main_topbtn">
-                <a href="#">
-                  <img src="/image/common/top_btn.png" alt="" />
-                </a>
-              </div>
               <div className="footer_section01">
-                <h1 className="item">
-                  <img src="/image/common/logo_footer_2022.png" />
-                </h1>
-
-                <ul className="adr item">
-                  <li>
-                    <b>Add</b>
-                    <a href="http://naver.me/FrK5Jjpc" target="_blank">
-                      서울 송파구 올림픽로 289 (신천동)
-                    </a>
-                  </li>
-                  <li>
-                    <b>Tel</b>
-                    <a href="tel:02-3434-5114">02-3434-5114 (대표)</a>
-                  </li>
-                  <li>
-                    <b>Fax</b>02-3434-5522
-                  </li>
-                </ul>
+                <ul className="w-[320px]"></ul>
               </div>
 
-              <div className="footer_section02 item">
-                <ul>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/halla.vivaldi/"
-                      target="_blank"
-                    >
-                      <img src="/image/common/footer_sns_instagram.png" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://post.naver.com/my.nhn?memberNo=4490345"
-                      target="_blank"
-                    >
-                      <img src="/image/common/footer_sns_post.png" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://blog.naver.com/halla_apt" target="_blank">
-                      <img src="/image/common/footer_sns_blog.png" />
-                    </a>
-                  </li>
-                  <li
-                    className="footer_family"
-                    onClick={() => setIsPop(!isPop)}
-                  >
-                    Family Site
-                    <div
-                      className="footer_family_down"
-                      style={{ display: isPop ? "block" : "none" }}
-                    >
-                      <a href="https://www.halla.com" target="_blank">
-                        HL그룹
-                      </a>
-
-                      <a href="https://www.hldni.com" target="_blank">
-                        HL D&amp;I Halla
-                      </a>
-                      <a href="https://brand.hldni.com" target="_blank">
-                        브랜드 고객전용
-                      </a>
-                    </div>
-                  </li>
-                </ul>
+              <div className="footer_section02">
+                <ul className="w-[320px]"></ul>
               </div>
             </div>
           </footer>
