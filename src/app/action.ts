@@ -60,8 +60,8 @@ export const requestCertify = async (
   try {
     const phoneNumber = formatPhoneNumber(rawPhoneNumber);
 
-    const user = await db.user.findUnique({ where: { phoneNumber } });
-    if (user) return IrequestSnsMsg.FAIL_DUPLICATED;
+    // const user = await db.user.findUnique({ where: { phoneNumber } });
+    // if (user) return IrequestSnsMsg.FAIL_DUPLICATED;
 
     phoneNumberSchema.parse(phoneNumber);
 
@@ -69,9 +69,8 @@ export const requestCertify = async (
     await setSerial(phoneNumber, serial);
     console.log(serial);
 
-    // await requestMsg(phoneNumber, serial);
-    // return IrequestSnsMsg.SUCCESS;
-    return serial;
+    await requestMsg(phoneNumber.replace(/-/g, ""), serial);
+    return IrequestSnsMsg.SUCCESS;
   } catch (error) {
     console.log(error);
     if (error instanceof z.ZodError) {

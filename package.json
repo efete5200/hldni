@@ -12,7 +12,9 @@
   "dependencies": {
     "@prisma/client": "^5.15.0",
     "@upstash/redis": "^1.31.4",
+    "axios": "^1.7.2",
     "exceljs": "^4.4.0",
+    "http-proxy-agent": "^7.0.2",
     "next": "14.2.3",
     "prisma": "^5.15.0",
     "react": "^18",

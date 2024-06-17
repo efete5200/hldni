@@ -1,22 +1,44 @@
+import axios from "axios";
+import { HttpProxyAgent } from "http-proxy-agent";
+
+const proxyUrl = "http://mzivpodx:r478ie6ahtyb@38.154.227.167:5868";
+const proxyAgent = new HttpProxyAgent(proxyUrl);
+
+const instance = axios.create({
+  httpAgent: proxyAgent,
+});
+
 export const fetchToken = async (): Promise<string> => {
-  const url = "https://api.bizppurio.com/v1/token";
+  const url = "https://message.ppurio.com/v1/token";
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Basic ${process.env.PPURIO_KEY}`,
+    Authorization: `Basic ${btoa(
+      (process.env.PPURIO_ACCOUNT + ":" + process.env.PPURIO_KEY) as string
+    )} `,
   };
 
-  const response = await fetch(url, {
-    method: "POST",
-    headers: headers,
-  });
-
-  if (!response.ok) {
-    console.log(response);
-    throw new Error(`Failed to get access token: ${response.statusText}`);
+  try {
+    const response = await instance.post(url, {}, { headers });
+    return response.data.token;
+  } catch (error: any) {
+    console.error(error);
+    throw new Error(
+      `Failed to get access token: ${error.response?.statusText}`
+    );
   }
 
-  const data = await response.json();
-  return data.token;
+  // const response = await fetch(url, {
+  //   method: "POST",
+  //   headers: headers,
+  // });
+
+  // if (!response.ok) {
+  //   console.log(response);
+  //   throw new Error(`Failed to get access token: ${response.statusText}`);
+  // }
+
+  // const data = await response.json();
+  // return data.token;
 };
 
 export const sendSms = async (
@@ -24,7 +46,7 @@ export const sendSms = async (
   phoneNumber: string,
   serial: string
 ) => {
-  const url = "https://api.bizppurio.com/v1/message";
+  const url = "https://message.ppurio.com/v1/message";
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Bearer ${token}`,
@@ -43,17 +65,26 @@ export const sendSms = async (
       },
     ],
     refKey: `ref-${serial}`,
+    subject: "인증번호",
   });
 
-  const response = await fetch(url, {
-    method: "POST",
-    headers: headers,
-    body: body,
-  });
-
-  if (!response.ok) {
-    throw new Error(`Failed to send SMS: ${response.statusText}`);
+  try {
+    const response = await instance.post(url, body, { headers });
+    return;
+  } catch (error: any) {
+    console.error(error.response?.data);
+    throw new Error(`Failed to send SMS: ${error.response?.statusText}`);
   }
 
-  console.log("SMS sent successsfully");
+  // const response = await fetch(url, {
+  //   method: "POST",
+  //   headers: headers,
+  //   body: body,
+  // });
+
+  // if (!response.ok) {
+  //   const json = await response.json();
+  //   console.log(json);
+  //   throw new Error(`Failed to send SMS: ${response.statusText}`);
+  // }
 };

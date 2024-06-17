@@ -18,8 +18,6 @@ import "../styles/reset.css";
 import "../styles/style.css";
 import "../styles/ha_newStyle.css";
 import "../styles/style_edit.css";
-import "../styles/swiper-bundle.min.css";
-import "../styles/sub.css";
 import "../styles/interest.css";
 import "../styles/addition.css";
 
@@ -47,8 +45,6 @@ const Page = () => {
   const [time, setTime] = useState(360); // 6분 = 360초
   const [pending, setPending] = useState(false);
 
-  const [isPop, setIsPop] = useState(false);
-
   const phoneNumber = `${first}-${mid}-${last}`;
 
   const HandleCertifyButton: MouseEventHandler<HTMLInputElement> = (e) => {
@@ -66,7 +62,7 @@ const Page = () => {
     setPending(true);
     const msg: IrequestSnsMsg | string = await requestCertify(phoneNumber);
     setPending(false);
-    if (msg.length === 6) {
+    if (msg === ICertifyButton.AUTH) {
       setCertifyButton(ICertifyButton.AUTH);
       alert(msg);
       return;

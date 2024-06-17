@@ -18,6 +18,7 @@ export async function GET() {
       status: 200,
     });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "Failed to export users" },
       { status: 500 }
