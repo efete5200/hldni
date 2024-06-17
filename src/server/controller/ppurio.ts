@@ -1,11 +1,15 @@
 import axios from "axios";
-import { HttpProxyAgent } from "http-proxy-agent";
-
-const proxyUrl = "http://mzivpodx:r478ie6ahtyb@38.154.227.167:5868";
-const proxyAgent = new HttpProxyAgent(proxyUrl);
 
 const instance = axios.create({
-  httpAgent: proxyAgent,
+  proxy: {
+    protocol: "http",
+    host: "38.154.227.167",
+    port: 5868,
+    auth: {
+      username: "mzivpodx",
+      password: "r478ie6ahtyb",
+    },
+  },
 });
 
 export const fetchToken = async (): Promise<string> => {
