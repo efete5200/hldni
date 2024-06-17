@@ -62,7 +62,7 @@ const Page = () => {
     setPending(true);
     const msg: IrequestSnsMsg | string = await requestCertify(phoneNumber);
     setPending(false);
-    if (msg === ICertifyButton.AUTH) {
+    if (msg === IrequestSnsMsg.SUCCESS) {
       setCertifyButton(ICertifyButton.AUTH);
       alert(msg);
       return;
@@ -160,10 +160,10 @@ const Page = () => {
               <table className="w-full table">
                 <colgroup>
                   <col width="15%" />
-                  <col width="*" />
+                  <col width="85%" />
                 </colgroup>
-                <tbody>
-                  <tr className="flex items-center">
+                <tbody className="flex flex-col items-center">
+                  <tr className="flex items-center w-[100%]">
                     <td className="heading w-10">성명</td>
                     <td>
                       <input
@@ -172,12 +172,12 @@ const Page = () => {
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="input_txt sm:w-[330px] transform translate-x-[-17px] md:translate-x-3"
+                        className="input_txt w-[200px] sm:w-[330px]"
                       />
                     </td>
                   </tr>
                   <tr className="flex items-center">
-                    <td className="heading">연락처</td>
+                    <td className="heading mr-3">연락처</td>
                     <td className="md:transform md:translate-x-4">
                       <input
                         type="text"
