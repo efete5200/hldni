@@ -139,7 +139,7 @@ const Page = () => {
 
   return (
     <body className="flex justify-center">
-      <div className="max-w-xl min-h-full sub interest bg-white">
+      <div className="max-w-xl min-h-full bg-white">
         <div className="visual user">
           <a
             href="/"
@@ -153,10 +153,11 @@ const Page = () => {
           </a>
           <h1 className="visual_title">상담고객 등록</h1>
         </div>
-        <main className="layout pb-10">
-          <form name="interest">
-            <div className="table_wrap">
-              <table className="table private data">
+
+        <main className="mx-6">
+          <form>
+            <div>
+              <table className="w-full table">
                 <colgroup>
                   <col width="15%" />
                   <col width="*" />
