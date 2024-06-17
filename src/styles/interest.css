@@ -204,7 +204,7 @@ interest page style
 .table td .input_txt_last {
 }
 .table td .input_txt1 {
-  width: 360px;
+  width: 350px;
 }
 .table td .input_txt2 {
   width: 100px;
@@ -400,9 +400,6 @@ interest page style
   .content_head {
     font-size: 26px;
   }
-  .table td .input_txt1 {
-    width: 250px;
-  }
   .submit_btn input {
     height: 50px;
     border-radius: 25px;
@@ -426,9 +423,6 @@ interest page style
   }
   .table td .input_txt_last {
     margin-right: 0;
-  }
-  .table td .input_txt1 {
-    width: 100%;
   }
   .table td > p .input_txt1 {
     width: calc(100% - 120px);
@@ -471,6 +465,9 @@ interest page style
   .table tr.agree_item span {
     display: block;
     margin-bottom: 10px;
+  }
+  .table td .input_txt1 {
+    width: 250px;
   }
   .table td .input_txt2 {
     width: 64px;

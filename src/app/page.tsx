@@ -139,7 +139,7 @@ const Page = () => {
 
   return (
     <body className="flex justify-center">
-      <div className="max-w-xl min-h-full bg-white">
+      <div className="max-w-xl min-h-full min-w-[300px] bg-white">
         <div className="visual user">
           <a
             href="/"
@@ -158,13 +158,9 @@ const Page = () => {
           <form>
             <div>
               <table className="w-full table">
-                <colgroup>
-                  <col width="15%" />
-                  <col width="85%" />
-                </colgroup>
                 <tbody className="flex flex-col items-center">
                   <tr className="flex items-center w-[100%]">
-                    <td className="heading w-10">성명</td>
+                    <td className="heading w-10 mr-5">성명</td>
                     <td>
                       <input
                         type="text"
@@ -172,11 +168,11 @@ const Page = () => {
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="input_txt w-[200px] sm:w-[330px]"
+                        className="input_txt input_txt1"
                       />
                     </td>
                   </tr>
-                  <tr className="flex items-center">
+                  <tr className="flex items-center w-[100%]">
                     <td className="heading mr-3">연락처</td>
                     <td className="md:transform md:translate-x-4">
                       <input

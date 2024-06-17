@@ -2012,7 +2012,8 @@ sub common
 
 .visual {
   position: relative;
-  height: 140px;
+  min-width: 300px;
+  min-height: 140px;
   width: 100%;
 }
 .visual.brand {

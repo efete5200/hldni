@@ -69,7 +69,7 @@ export const requestCertify = async (
     await setSerial(phoneNumber, serial);
     console.log(serial);
 
-    // await requestMsg(phoneNumber.replace(/-/g, ""), serial);
+    await requestMsg(phoneNumber.replace(/-/g, ""), serial);
     return IrequestSnsMsg.SUCCESS;
   } catch (error) {
     console.log(error);
