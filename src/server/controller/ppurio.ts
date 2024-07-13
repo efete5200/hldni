@@ -1,14 +1,14 @@
 import axios from "axios";
+import url from "url";
+const fixieUrl = url.parse(process.env.FIXIE_URL as string);
+const fixieAuth = (fixieUrl.auth as string).split(":");
 
 const instance = axios.create({
   proxy: {
     protocol: "http",
-    host: "38.154.227.167",
-    port: 5868,
-    auth: {
-      username: "mzivpodx",
-      password: "r478ie6ahtyb",
-    },
+    host: fixieUrl.hostname as string,
+    port: Number(fixieUrl.port),
+    auth: { username: fixieAuth[0], password: fixieAuth[1] },
   },
 });
 
