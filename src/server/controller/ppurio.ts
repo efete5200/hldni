@@ -72,6 +72,8 @@ export const sendSms = async (
     subject: "인증번호",
   });
 
+  console.log(process.env.PPURIO_PHONE_NUMBER);
+
   try {
     const response = await instance.post(url, body, { headers });
     return;
